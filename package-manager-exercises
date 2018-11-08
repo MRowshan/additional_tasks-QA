@@ -1,0 +1,57 @@
+1)What is the difference between YUM and APT?
+	They are both used in different operating systems
+
+2)What is a .deb file, and what does it contain?
+	Debian software package file
+
+3)How would you install a .deb file?
+	sudo dpkg -i package.deb
+
+4)What is a .rpm file?
+	RPM package manager software package file
+
+5)How do you update your local repo list with YUM and APT?
+	sudo apt update
+	sudo apt-get update
+	sudo yum update
+
+6)How would you install multiple packages without having to confirm the selection?
+	Add -y
+
+7)How do you uninstall a package in YUM and APT?
+	sudo yum remove package
+	sudo apt remove package / sudo apt purge package
+
+8)Where do package managers place the binaries?
+	/var/lib/
+
+9)How do you install a specific version of a package?
+	Add the version number to the install command
+	sudo yum install python3.2
+
+10)How do you upgrade a single package / all packages?
+	sudo apt-get upgrade
+
+11)Get the latest info on the mysql-server-5.7 package.
+	sudo apt show mysql-server
+
+	a)Who maintains it?
+		Ondřej Surý <ondrej@debian.org>
+
+	b)How large is it?
+		8,192 B
+
+	c)What does it depend on?
+		default-mysql-server
+
+	d)What does it suggest you install with it?
+		
+
+	e)What does it recommend you install with it?
+
+
+12)Where is the package installed to?
+	/var/lib/
+
+13)Remove a package with its configuration files
+	sudo apt purge package
