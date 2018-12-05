@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git clone https://github.com/MRowshan/additional_tasks-QA
+git clone https://github.com/MRowshan/vim
+git clone https://github.com/MRowshan/ranger
+
+./additional_tasks-QA/git-setup
+./vim/install
+cd ranger && sudo make install
