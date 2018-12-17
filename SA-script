@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Get name for SA account
+echo "Enter name for service account"
+read name
+# Create service account
+gcloud iam service-accounts create $name --display-name $name
+# Give editor role to created account
+gcloud projects add-iam-policy-binding vm-testing-219509 --member serviceAccount:$name@vm-testing-219509.iam.gserviceaccount.com --role roles/editor
+# Genereate key for account
+gcloud iam service-accounts keys create ~/keys.json --iam-acocount $name@vm-testing-219509.iam.gserviceaccount.com
+
+```
+# Remove account
+gcloud iam service-accounts delete $name@vm-testing-219509.iam.gserviceaccount.com
+# Remove role
+gcloud projects remove-iam-policy-binding vm-testing-219509 --member serviceAccount:$name@vm-testing-219509.iam.gserviceaccount.com --role roles/editor
+```
